@@ -44,11 +44,10 @@ body {
 .tooltip{
     position: absolute;
     min-width: 180px;
-    padding: 30px 15px;
-    border: solid 1px black;
+    padding: 30px 15px;    
     transform: translateY(-140%);
     border-radius: 15px;  
-    background: black;  
+    background: rgb(68, 64, 128);  
     color: white;
 
 }
@@ -58,7 +57,7 @@ body {
     width: 24px;
     height: 24px;
     position: absolute;
-    background: black;
+    background: inherit; 
     bottom: -6px;
     left: 13px;
     transform: rotate(45deg);
