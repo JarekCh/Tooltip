@@ -44,13 +44,21 @@ body {
 .tooltip{
     position: absolute;
     min-width: 180px;
-    padding: 30px 15px;    
-    transform: translateY(-140%);
+    padding: 30px 15px;        
     border-radius: 15px;  
     background: rgb(68, 64, 128);  
     color: white;
-
 }
+
+.tooltip.top{
+    transform: translateY(-140%);
+}
+
+.tooltip.bottom{
+    bottom: 0;
+    transform: translateY(130%);
+}
+
 
 .tooltip::after{
     content: '';
@@ -58,7 +66,16 @@ body {
     height: 24px;
     position: absolute;
     background: inherit; 
+}
+
+.tooltip.top::after{
     bottom: -6px;
+    left: 13px;
+    transform: rotate(45deg);    
+}
+
+.tooltip.bottom::after{
+    top: -6px;
     left: 13px;
     transform: rotate(45deg);
 }

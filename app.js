@@ -4,10 +4,14 @@ const boxes = document.querySelectorAll('.boxes div');
 const createTooltip = (e) => {
     const tooltipParent = e.target;
     const tooltipText = tooltipParent.dataset.tooltip;
+    const tooltipPosition = tooltipParent.dataset.tooltipPosition;
+
+    console.log(tooltipPosition);
+
 
     const newTooltip = document.createElement('span');
     newTooltip.innerHTML = tooltipText;
-    newTooltip.className = "tooltip"
+    newTooltip.className = `tooltip ${tooltipPosition || "top"}`;
 
     tooltipParent.appendChild(newTooltip);
 }
